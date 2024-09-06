@@ -1,0 +1,40 @@
+.text-container {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.spiral-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #111414; /* Text color from your palette */
+  position: relative;
+  z-index: 1;
+}
+
+.bubble {
+  position: absolute;
+  top: -12px; /* Position the bubble above the text */
+  width: 30px;
+  height: 30px;
+  right: -10px;
+  background-color: #111414; /* Bubble color */
+  border-radius: 50%;
+  animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(0.1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(0.1);
+    opacity: 1;
+  }
+}

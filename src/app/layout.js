@@ -1,15 +1,18 @@
-import { Inter } from "next/font/google";
+import Transition from "./components/Transition";
 import "./globals.scss";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Transition />
       <head>
         <title>Shubham Bhardwaj</title>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <header>Header</header>
+        {children}
+        <footer>All rights reserved @shubh</footer>
+      </body>
     </html>
   );
 }
