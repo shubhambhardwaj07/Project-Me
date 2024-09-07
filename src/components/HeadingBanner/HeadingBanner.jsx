@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeadingBanner.scss";
 
-function HeadingBanner() {
+export const HeadingBanner = () => {
   return (
     <div>
       <h1 className="heading">
@@ -10,12 +10,7 @@ function HeadingBanner() {
           <div className="bubble"></div>
         </div>
       </h1>
-      <h2 className="headTxt">
-        Hello there, I’m a designer who cares about making beautiful things that
-        help people.
-      </h2>
+      <h2 className="headTxt">Hello there</h2>
     </div>
   );
-}
-
-export default HeadingBanner;
+};

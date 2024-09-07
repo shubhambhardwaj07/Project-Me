@@ -36,42 +36,51 @@ a {
   color: inherit;
   text-decoration: none;
 }
+// styles/globals.scss
 
-/* Curtain Effect */
-@keyframes curtain-open {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes curtain-close {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.wrapper {
+  position: relative; /* Ensures content and curtain are in the same stacking context */
 }
 
 .curtain {
-  position: fixed;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: #124e66; /* Background color from your palette */
-  z-index: 9999;
-  transition: transform 0.5s ease-out; /* Adjust timing as needed */
-}
-
-.curtain.left {
+  position: fixed; /* Fix the curtain to cover the entire viewport */
+  bottom: 0;
   left: 0;
-  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999; /* Ensure curtain is on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.curtain.right {
-  right: 0;
-  transform: translateX(-100%);
+.curtain-content {
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1; /* Ensure content is above the background image */
+}
+
+.curtain-text {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif; /* Update with your preferred font */
+}
+
+.curtain-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5; /* Adjust as needed */
+  z-index: -1; /* Place image behind text */
+}
+
+.content {
+  position: relative; /* Ensure content remains on top of the curtain */
+  z-index: 1; /* Ensure content is on top */
 }
