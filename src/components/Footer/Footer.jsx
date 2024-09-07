@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p className="message">"Strive for greatness, every day."</p>
+        <p className="message">Strive for greatness, every day.</p>
         <div className="social-links">
           <a
             href="https://www.linkedin.com/in/shubham/"
@@ -28,7 +28,7 @@ export const Footer = () => {
             Twitter
           </a>
         </div>
-        <p className="copyright">&copy; 2024 Shubham. All rights reserved.</p>
+        <p className="copyright">2024 Shubham. All rights reserved.</p>
       </div>
     </footer>
   );

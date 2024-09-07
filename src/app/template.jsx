@@ -3,6 +3,7 @@
 
 import { motion, cubicBezier, AnimatePresence } from "framer-motion";
 import "./globals.scss";
+import Image from "next/image";
 
 const customEasing = cubicBezier(0.645, 0.045, 0.355, 1);
 
@@ -21,7 +22,7 @@ export default function Template({ children }) {
         >
           <div className="curtain-content">
             <h1 className="curtain-text">Welcome to My Site</h1>
-            <img
+            <Image
               src="/images/background-image.jpg" // Path relative to public folder
               alt="Background"
               className="curtain-image"
