@@ -1,10 +1,8 @@
-import Transition from "./components/Transition";
 import "./globals.scss";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Transition />
       <head>
         <title>Shubham Bhardwaj</title>
       </head>
