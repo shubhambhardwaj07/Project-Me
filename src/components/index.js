@@ -1,4 +1,2 @@
-export * from "./HeadingBanner/HeadingBanner";
-export * from "./Header/Header";
-export * from "./Footer/Footer";
-export * from "./Transition/Transition";
+export * from "./Curve/Curve";
+export * from "./InitialLoader/InitialLoader";
