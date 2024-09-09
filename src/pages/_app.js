@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { InitialLoader } from "@/components";
 
 export default function App({ Component, pageProps, router }) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => {
