@@ -10,13 +10,12 @@ export const Hamburger = () => {
   };
 
   const menuVariants = {
-    hidden: { opacity: 0, y: 20, backgroundColor: "#333" },
+    hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      backgroundColor: "#444", // Transition background color
       transition: {
-        delay: i * 0.1, // Staggered animation
+        delay: i * 0.1,
         duration: 0.5,
         ease: [0.42, 0, 0.58, 1], // Smooth cubic-bezier
       },
