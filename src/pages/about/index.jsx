@@ -1,4 +1,4 @@
-import { Curve } from "../../components";
+import { PageTransition } from "../../components";
 import Head from "next/head";
 
 export default function About() {
@@ -10,10 +10,10 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Curve>
+      <PageTransition>
         <h1>About</h1>
         <div className="body"></div>
-      </Curve>
+      </PageTransition>
     </>
   );
 }
