@@ -37,25 +37,42 @@
   flex-direction: column;
   z-index: 1000;
   transform: translateX(100%); /* Start off-screen to the right */
-  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth transition */
+  transition: transform 0.6s cubic-bezier(0.42, 0, 0.58, 1); /* Smooth cubic-bezier transition */
 }
 
 .menuItems {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  text-align: center;
+  width: 100%; /* Full width */
+  text-align: center; /* Center items horizontally */
 }
 
 .menuItem {
-  font-size: 36px;
+  font-size: 32px; /* Increased font size */
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  position: relative;
+  padding: 10px 20px; /* Add padding for better click area */
+  overflow: hidden; /* Hide overflow for animation */
+  background-color: transparent; /* Initial background color */
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
 }
 
-.menuItem:hover {
-  color: #f0a500;
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Light background color for effect */
+  transform-origin: bottom left;
+  transform: scaleX(0); /* Start with no visible effect */
 }
