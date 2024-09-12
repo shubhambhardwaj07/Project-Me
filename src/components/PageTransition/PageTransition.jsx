@@ -96,9 +96,9 @@ export const PageTransition = ({ children, backgroundColor }) => {
         style={{ opacity: dimensions.width == null ? 1 : 0 }}
         className="background"
       />
-      <motion.p className="route" {...anim(text)}>
+      {/* <motion.p className="route" {...anim(text)}>
         {routes[router.route]}
-      </motion.p>
+      </motion.p> */}
       {dimensions.width != null && <SVG {...dimensions} />}
       {children}
     </div>

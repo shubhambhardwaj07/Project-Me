@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out items */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #fcfaf8; /* Background color */
+  padding: 20px; /* Add padding if needed */
+  position: relative;
+}
+
+.imageContainer {
+  width: 50%; /* Adjust width as needed */
+  height: 100vh; /* Full height of viewport */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply; /* Blend mode to mix with the background */
+}
+
+.textContainer {
+  width: 50%; /* Adjust width as needed */
+  padding: 20px; /* Add padding if needed */
+}
+
+.name {
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #171717;
+  margin: 0;
+  background: linear-gradient(to right, #171717, #fcfaf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.5s ease; /* Smooth color transition */
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+}

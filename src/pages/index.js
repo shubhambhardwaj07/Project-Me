@@ -1,4 +1,4 @@
-import { PageTransition } from "../components";
+import { HomeArt, PageTransition } from "../components";
 import Head from "next/head";
 
 export default function Home() {
@@ -11,8 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageTransition>
-        <h1>Home</h1>
-        <div className="body"></div>
+        <HomeArt />
       </PageTransition>
     </>
   );

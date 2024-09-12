@@ -1,5 +1,9 @@
+/* Hamburger.module.css */
+
 .container {
-  position: relative;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
   z-index: 1000;
 }
 
@@ -31,7 +35,7 @@
   width: 80vw; /* Adjusted for mobile */
   max-width: 400px;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #171717;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,12 +57,30 @@
   font-size: 32px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 20px;
   cursor: pointer;
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 0; /* Adjusted for vertical padding */
   overflow: hidden;
-  transition: background-color 0.3s ease-in-out;
+  width: 100%; /* Ensure full width */
+}
+
+.menuItem a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  width: 100%; /* Ensure full width of menu item */
+  height: 100%; /* Ensure full height of menu item */
+  padding: 10px 20px; /* Ensure padding is consistent */
+  box-sizing: border-box; /* Include padding in width/height calculation */
+  position: relative;
+}
+
+.menuItem a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hover color */
+}
+
+.menuItem:hover .hoverEffect {
+  transform: scaleX(1); /* Show hover effect on hover */
 }
 
 .hoverEffect {
@@ -70,6 +92,7 @@
   background-color: rgba(255, 255, 255, 0.2);
   transform-origin: bottom left;
   transform: scaleX(0);
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
 @media (max-width: 768px) {
@@ -84,6 +107,6 @@
 
   .menuItem {
     font-size: 28px;
-    padding: 8px 16px;
+    padding: 8px 0; /* Adjusted for smaller screens */
   }
 }
