@@ -1,17 +1,19 @@
 .container {
   display: flex;
-  flex-direction: row; /* Align items horizontally */
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space out items */
-  min-height: 100vh; /* Full viewport height */
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Space out the image and text */
+  height: 100vh; /* Full viewport height */
   background-color: #fcfaf8; /* Background color */
-  padding: 20px; /* Add padding if needed */
   position: relative;
+  overflow: hidden; /* Prevent scrollbars */
 }
 
 .imageContainer {
-  width: 50%; /* Adjust width as needed */
-  height: 100vh; /* Full height of viewport */
+  position: absolute;
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  width: auto; /* Adjust width as needed */
+  height: 100vh; /* Full height */
   overflow: hidden;
   border-radius: 10px;
 }
@@ -24,19 +26,38 @@
 }
 
 .textContainer {
-  width: 50%; /* Adjust width as needed */
-  padding: 20px; /* Add padding if needed */
+  margin-left: 20px; /* Space from the left edge */
+  max-width: 50%; /* Ensure text container takes up half the space */
+  z-index: 10; /* Ensure text is above other elements */
 }
 
 .name {
-  font-size: 3rem; /* Adjust font size as needed */
-  font-weight: bold;
+  font-size: 3.5rem; /* Bold size for name */
+  font-weight: 900; /* Extra bold */
   color: #171717;
   margin: 0;
   background: linear-gradient(to right, #171717, #fcfaf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background 0.5s ease; /* Smooth color transition */
+  position: relative;
+  display: inline-block;
+  padding: 0 10px; /* Add some padding */
+}
+
+.name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #e91e63, #ff9800);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.name:hover::after {
+  transform: scaleX(1);
 }
 
 .title {
